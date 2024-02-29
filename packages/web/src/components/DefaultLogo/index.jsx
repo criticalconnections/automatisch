@@ -3,6 +3,7 @@ import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
 import MationLogo from 'components/MationLogo';
 import useAutomatischInfo from 'hooks/useAutomatischInfo';
+
 const DefaultLogo = () => {
   const { isMation, loading } = useAutomatischInfo();
   if (loading) return <React.Fragment />;
@@ -13,4 +14,5 @@ const DefaultLogo = () => {
     </Typography>
   );
 };
+
 export default DefaultLogo;
