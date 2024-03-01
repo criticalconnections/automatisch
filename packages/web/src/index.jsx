@@ -1,21 +1,25 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import ThemeProvider from 'components/ThemeProvider';
 import IntlProvider from 'components/IntlProvider';
 import ApolloProvider from 'components/ApolloProvider';
 import SnackbarProvider from 'components/SnackbarProvider';
 import MetadataProvider from 'components/MetadataProvider';
 import { AuthenticationProvider } from 'contexts/Authentication';
-import { AutomatischInfoProvider } from 'contexts/AutomatischInfo';
+import QueryClientProvider from 'components/QueryClientProvider';
 import Router from 'components/Router';
 import LiveChat from 'components/LiveChat/index.ee';
 import routes from 'routes';
 import reportWebVitals from './reportWebVitals';
-ReactDOM.render(
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <Router>
     <SnackbarProvider>
       <AuthenticationProvider>
-        <ApolloProvider>
-          <AutomatischInfoProvider>
+        <QueryClientProvider>
+          <ApolloProvider>
             <IntlProvider>
               <ThemeProvider>
                 <MetadataProvider>
@@ -25,12 +29,11 @@ ReactDOM.render(
                 </MetadataProvider>
               </ThemeProvider>
             </IntlProvider>
-          </AutomatischInfoProvider>
-        </ApolloProvider>
+          </ApolloProvider>
+        </QueryClientProvider>
       </AuthenticationProvider>
     </SnackbarProvider>
   </Router>,
-  document.getElementById('root'),
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -13,6 +13,7 @@
     "@mui/icons-material": "^5.11.9",
     "@mui/lab": "^5.0.0-alpha.120",
     "@mui/material": "^5.11.10",
+    "@tanstack/react-query": "^5.24.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -23,8 +24,8 @@
     "luxon": "^2.3.1",
     "mui-color-input": "^2.0.0",
     "notistack": "^3.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.2",
     "react-intl": "^5.20.12",
     "react-json-tree": "^0.16.2",
@@ -46,7 +47,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js,.jsx",
-    "prepack": "REACT_APP_GRAPHQL_URL=/graphql yarn build"
+    "prepack": "yarn build"
   },
   "files": [
     "/build"
@@ -80,6 +81,8 @@
     "access": "public"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.20.1",
+    "@tanstack/react-query-devtools": "^5.24.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^7.0.1",
     "prettier": "^3.2.5"
