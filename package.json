@@ -8,11 +8,6 @@
     "start:backend": "lerna run --stream --scope=@*/backend dev",
     "build:docs": "cd ./packages/docs && yarn install && yarn build"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.3.0",
