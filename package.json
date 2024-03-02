@@ -11,12 +11,6 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "**/babel-loader",
-      "**/webpack",
-      "**/@automatisch/web",
-      "**/ajv"
     ]
   },
   "devDependencies": {
