@@ -10,7 +10,7 @@ export default {
       type: 'string',
       required: true,
       readOnly: true,
-      value: '{WEB_APP_URL}/app/twitter/connections/add',
+      value: '192.168.1.63:3000/app/twitter/connections/add',
       placeholder: null,
       description:
         'When asked to input an OAuth callback or redirect URL in Twitter OAuth, enter the URL above.',
